@@ -8,14 +8,16 @@ import { leadMagnet } from '@/data';
 
 const Hero = () => {
   const [showLeadMagnet, setShowLeadMagnet] = useState(false);
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
   const handleLeadMagnetSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Email submitted:', email);
-    alert('Thank you! Your wedding planning checklist will be sent to your email.');
+    console.log('Name:', name, 'Email:', email);
+    alert(`Thank you ${name}! Your wedding planning checklist will be sent to your email.`);
     setShowLeadMagnet(false);
+    setName('');
     setEmail('');
   };
 
@@ -212,6 +214,14 @@ const Hero = () => {
             </div>
 
             <form onSubmit={handleLeadMagnetSubmit} className="space-y-4">
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Enter your full name"
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-400 focus:border-transparent outline-none"
+              />
               <input
                 type="email"
                 value={email}
