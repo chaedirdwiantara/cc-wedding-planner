@@ -1,0 +1,68 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with subtle gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fdf2f8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fce7f3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#be185d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9d174d;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  
+  <!-- Outer decorative ring -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#f3e8ff" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Main background circle -->
+  <circle cx="100" cy="100" r="85" fill="url(#bgGradient)" filter="url(#shadow)"/>
+  
+  <!-- Decorative floral elements -->
+  <g opacity="0.3">
+    <!-- Top left flower -->
+    <g transform="translate(30,30)">
+      <circle cx="0" cy="0" r="3" fill="#f472b6"/>
+      <circle cx="5" cy="0" r="2" fill="#ec4899"/>
+      <circle cx="-5" cy="0" r="2" fill="#ec4899"/>
+      <circle cx="0" cy="5" r="2" fill="#ec4899"/>
+      <circle cx="0" cy="-5" r="2" fill="#ec4899"/>
+    </g>
+    
+    <!-- Top right flower -->
+    <g transform="translate(170,30)">
+      <circle cx="0" cy="0" r="3" fill="#f472b6"/>
+      <circle cx="5" cy="0" r="2" fill="#ec4899"/>
+      <circle cx="-5" cy="0" r="2" fill="#ec4899"/>
+      <circle cx="0" cy="5" r="2" fill="#ec4899"/>
+      <circle cx="0" cy="-5" r="2" fill="#ec4899"/>
+    </g>
+    
+    <!-- Bottom decorative elements -->
+    <g transform="translate(100,170)">
+      <circle cx="-15" cy="0" r="2" fill="#f472b6"/>
+      <circle cx="0" cy="0" r="3" fill="#ec4899"/>
+      <circle cx="15" cy="0" r="2" fill="#f472b6"/>
+    </g>
+  </g>
+  
+  <!-- Main CC Text -->
+  <text x="100" y="105" font-family="serif" font-size="48" font-weight="bold" text-anchor="middle" fill="url(#textGradient)" letter-spacing="2px">CC</text>
+  
+  <!-- Decorative line under CC -->
+  <line x1="70" y1="115" x2="130" y2="115" stroke="#be185d" stroke-width="2" opacity="0.7"/>
+  
+  <!-- Small decorative dots -->
+  <circle cx="60" cy="115" r="2" fill="#be185d" opacity="0.7"/>
+  <circle cx="140" cy="115" r="2" fill="#be185d" opacity="0.7"/>
+  
+  <!-- Subtitle text -->
+  <text x="100" y="130" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#9d174d" opacity="0.8" letter-spacing="1px">WEDDING ORGANIZER</text>
+  
+  <!-- Decorative heart accent -->
+  <g transform="translate(100,75)">
+    <path d="M0,5 C-5,0 -10,0 -10,5 C-10,10 0,15 0,15 C0,15 10,10 10,5 C10,0 5,0 0,5Z" fill="#f472b6" opacity="0.4"/>
+  </g>
+</svg>
