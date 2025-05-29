@@ -81,8 +81,7 @@ export const testimonials: Testimonial[] = [
     content: 'Charlotte made our dream wedding come true! Her attention to detail and calm presence made our day absolutely perfect. We couldn\'t have asked for a better wedding planner.',
     rating: 5,
     weddingDate: 'June 2024',
-    venue: 'Kew Gardens, London',
-    image: '/images/testimonials/couple-1.jpg'
+    venue: 'Kew Gardens, London'
   },
   {
     id: '2',
@@ -91,8 +90,7 @@ export const testimonials: Testimonial[] = [
     content: 'From our first meeting to the last dance, Charlotte exceeded every expectation. Her vendor network is incredible and she truly understood our vision.',
     rating: 5,
     weddingDate: 'September 2024',
-    venue: 'Château de Varennes, France',
-    image: '/images/testimonials/couple-2.jpg'
+    venue: 'Château de Varennes, France'
   },
   {
     id: '3',
@@ -101,8 +99,7 @@ export const testimonials: Testimonial[] = [
     content: 'Charlotte\'s expertise in destination weddings is unmatched. She handled every detail of our Tuscany wedding flawlessly, allowing us to enjoy every moment.',
     rating: 5,
     weddingDate: 'May 2024',
-    venue: 'Villa San Crispolto, Italy',
-    image: '/images/testimonials/couple-3.jpg'
+    venue: 'Villa San Crispolto, Italy'
   },
   {
     id: '4',
@@ -111,8 +108,7 @@ export const testimonials: Testimonial[] = [
     content: 'Professional, creative, and incredibly organized. Charlotte turned our vision into reality and made the entire planning process enjoyable and stress-free.',
     rating: 5,
     weddingDate: 'August 2024',
-    venue: 'Hampton Court Palace',
-    image: '/images/testimonials/couple-4.jpg'
+    venue: 'Hampton Court Palace'
   }
 ];
 
@@ -121,7 +117,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: '1',
     title: 'Elegant Garden Romance',
     description: 'A sophisticated garden wedding featuring blush roses, eucalyptus, and romantic candlelight.',
-    images: ['/images/portfolio/garden-1.jpg', '/images/portfolio/garden-2.jpg', '/images/portfolio/garden-3.jpg'],
+    images: ['/portfolio/garden-1.jpg', '/portfolio/garden-2.jpg', '/portfolio/garden-3.jpg'],
     venue: 'Kew Gardens, London',
     date: 'June 2024',
     style: 'Romantic Garden',
@@ -131,7 +127,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: '2',
     title: 'Château Destination Dream',
     description: 'A fairytale destination wedding in the French countryside with vintage elegance.',
-    images: ['/images/portfolio/chateau-1.jpg', '/images/portfolio/chateau-2.jpg', '/images/portfolio/chateau-3.jpg'],
+    images: ['/portfolio/chateau-1.jpg', '/portfolio/chateau-2.jpg', '/portfolio/chateau-3.jpg'],
     venue: 'Château de Varennes, France',
     date: 'September 2024',
     style: 'Vintage Elegance',
@@ -141,7 +137,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: '3',
     title: 'Intimate City Celebration',
     description: 'A chic and modern intimate wedding in the heart of London with contemporary design.',
-    images: ['/images/portfolio/city-1.jpg', '/images/portfolio/city-2.jpg', '/images/portfolio/city-3.jpg'],
+    images: ['/portfolio/city-1.jpg', '/portfolio/city-2.jpg', '/portfolio/city-3.jpg'],
     venue: 'The Shard, London',
     date: 'March 2024',
     style: 'Modern Chic',
@@ -151,7 +147,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: '4',
     title: 'Tuscan Villa Magic',
     description: 'A luxurious destination wedding in Tuscany with olive groves and golden hour magic.',
-    images: ['/images/portfolio/tuscany-1.jpg', '/images/portfolio/tuscany-2.jpg', '/images/portfolio/tuscany-3.jpg'],
+    images: ['/portfolio/tuscany-1.jpg', '/portfolio/tuscany-2.jpg', '/portfolio/tuscany-3.jpg'],
     venue: 'Villa San Crispolto, Italy',
     date: 'May 2024',
     style: 'Tuscan Romance',
@@ -161,7 +157,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: '5',
     title: 'Royal Palace Grandeur',
     description: 'A grand traditional wedding at a historic palace with timeless elegance.',
-    images: ['/images/portfolio/palace-1.jpg', '/images/portfolio/palace-2.jpg', '/images/portfolio/palace-3.jpg'],
+    images: ['/portfolio/palace-1.jpg', '/portfolio/palace-2.jpg', '/portfolio/palace-3.jpg'],
     venue: 'Hampton Court Palace',
     date: 'August 2024',
     style: 'Royal Traditional',
@@ -171,7 +167,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: '6',
     title: 'Minimalist Modern Love',
     description: 'A sleek and contemporary wedding with clean lines and sophisticated details.',
-    images: ['/images/portfolio/modern-1.jpg', '/images/portfolio/modern-2.jpg', '/images/portfolio/modern-3.jpg'],
+    images: ['/portfolio/modern-1.jpg', '/portfolio/modern-2.jpg', '/portfolio/modern-3.jpg'],
     venue: 'Tate Modern, London',
     date: 'October 2024',
     style: 'Contemporary Minimalist',
@@ -185,7 +181,7 @@ export const blogPosts: BlogPost[] = [
     title: 'The Ultimate Wedding Planning Timeline: 12 Months to Your Perfect Day',
     excerpt: 'A comprehensive guide to planning your wedding with a detailed month-by-month timeline to ensure nothing is forgotten.',
     content: 'Planning a wedding can feel overwhelming, but with the right timeline, you can stay organized and stress-free...',
-    image: '/images/blog/timeline.jpg',
+    image: '/blog/timeline.jpg',
     publishedAt: '2024-01-15',
     readTime: 8,
     tags: ['Planning', 'Timeline', 'Organization'],
@@ -196,7 +192,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Top 10 Wedding Venues in London for 2024',
     excerpt: 'Discover the most stunning wedding venues London has to offer, from historic palaces to modern galleries.',
     content: 'London offers an incredible array of wedding venues, each with its own unique character and charm...',
-    image: '/images/blog/venues.jpg',
+    image: '/blog/venues.jpg',
     publishedAt: '2024-02-01',
     readTime: 6,
     tags: ['Venues', 'London', 'Inspiration'],
@@ -207,7 +203,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Destination Wedding Planning: Everything You Need to Know',
     excerpt: 'Essential tips and considerations for planning the perfect destination wedding in Europe.',
     content: 'Destination weddings offer a unique opportunity to celebrate your love in a stunning location...',
-    image: '/images/blog/destination.jpg',
+    image: '/blog/destination.jpg',
     publishedAt: '2024-02-20',
     readTime: 10,
     tags: ['Destination', 'Europe', 'Travel'],

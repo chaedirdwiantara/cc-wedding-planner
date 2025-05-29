@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Star, Quote, ChevronLeft, ChevronRight, Heart, Calendar, MapPin } from 'lucide-react';
+import Image from "next/image";
 import { testimonials } from '@/data';
 
 const Testimonials = () => {
@@ -99,19 +100,16 @@ const Testimonials = () => {
                 </div>
               </div>
 
-              {/* Client Image Placeholder */}
+              {/* Client Image */}
               <div className="lg:col-span-1">
                 <div className="relative">
-                  <div className="w-full h-64 lg:h-80 bg-gradient-to-br from-rose-100 to-sage-100 rounded-2xl shadow-soft overflow-hidden">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-soft mb-4 mx-auto">
-                          <Heart className="w-10 h-10 text-rose-400" />
-                        </div>
-                        <p className="text-gray-600 font-medium">Happy Couple</p>
-                        <p className="text-sm text-gray-500">Photo Coming Soon</p>
-                      </div>
-                    </div>
+                  <div className="w-full h-64 lg:h-80 rounded-2xl shadow-soft overflow-hidden">
+                    <Image
+                      src={currentTestimonial.image || '/images/testimonials/couple-1.jpg'}
+                      alt={`${currentTestimonial.name} - Happy Couple`}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                 </div>
               </div>

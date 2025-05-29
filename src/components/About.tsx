@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from "next/image";
 import { Award, Heart, Users, MapPin, Clock, Star } from 'lucide-react';
 
 const About = () => {
@@ -105,18 +106,14 @@ const About = () => {
             className="relative"
           >
             <div className="relative">
-              {/* Main Image Placeholder */}
-              <div className="w-full h-96 lg:h-[500px] bg-gradient-to-br from-rose-100 to-sage-100 rounded-3xl shadow-elegant overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-soft mb-6 mx-auto">
-                      <span className="font-playfair text-4xl font-bold text-gray-800">CC</span>
-                    </div>
-                    <h3 className="font-playfair text-2xl font-bold text-gray-800 mb-2">Charlotte Chalder</h3>
-                    <p className="text-gray-600 font-medium">Luxury Wedding Planner</p>
-                    <p className="text-sm text-gray-500 mt-2">Professional Portrait Coming Soon</p>
-                  </div>
-                </div>
+              {/* Charlotte's Portrait */}
+              <div className="w-full h-96 lg:h-[500px] rounded-3xl shadow-elegant overflow-hidden">
+                <Image
+                  src="/images/about/charlotte-portrait.jpg"
+                  alt="Charlotte Chalder - Professional Wedding Planner"
+                  fill
+                  className="object-cover"
+                />
               </div>
 
               {/* Floating Achievement Cards */}

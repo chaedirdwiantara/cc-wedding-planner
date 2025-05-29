@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Camera, MapPin, Calendar, Filter, Eye } from 'lucide-react';
+import Image from "next/image";
 import { portfolioItems } from '@/data';
 import type { PortfolioItem } from '@/types';
 
@@ -95,15 +96,14 @@ const Portfolio = () => {
               onClick={() => setSelectedItem(item)}
             >
               <div className="bg-white rounded-3xl overflow-hidden shadow-soft hover:shadow-elegant transition-all duration-300 group-hover:-translate-y-2">
-                {/* Image Placeholder */}
-                <div className="relative h-64 bg-gradient-to-br from-rose-100 to-sage-100 overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <Camera className="w-12 h-12 text-gray-400 mx-auto mb-2" />
-                      <p className="text-gray-500 text-sm">Wedding Photography</p>
-                      <p className="text-xs text-gray-400">Coming Soon</p>
-                    </div>
-                  </div>
+                {/* Portfolio Image */}
+                <div className="relative h-64 overflow-hidden">
+                  <Image
+                    src={item.images[0]}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                  />
                   
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">

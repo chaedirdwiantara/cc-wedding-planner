@@ -1,8 +1,10 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { ArrowDown, Download, Star, MapPin } from 'lucide-react';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+import Image from "next/image";
+import { ArrowDown, Download, MapPin, Star } from 'lucide-react';
+import { leadMagnet } from '@/data';
 
 const Hero = () => {
   const [showLeadMagnet, setShowLeadMagnet] = useState(false);
@@ -10,11 +12,11 @@ const Hero = () => {
 
   const handleLeadMagnetSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically handle the email submission
+    // Handle form submission here
     console.log('Email submitted:', email);
     alert('Thank you! Your wedding planning checklist will be sent to your email.');
-    setEmail('');
     setShowLeadMagnet(false);
+    setEmail('');
   };
 
   const scrollToNext = () => {
@@ -26,13 +28,18 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-rose-50 via-white to-sage-50"></div>
-      
-      {/* Decorative Elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-rose-200/30 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-sage-200/30 rounded-full blur-3xl"></div>
-      
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/hero/hero-background.jpg"
+          alt="Elegant wedding background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/20"></div>
+      </div>
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -63,7 +70,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight"
+              className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
             >
               Creating{' '}
               <span className="text-gradient">Unforgettable</span>
@@ -76,7 +83,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl"
+              className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl"
             >
               I'm Charlotte Chalder, a luxury wedding planner specializing in elegant and sophisticated celebrations across the UK and Europe. Let me turn your dream wedding into reality.
             </motion.p>
@@ -112,41 +119,37 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-200"
+              className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-white/20"
             >
               <div className="text-center lg:text-left">
-                <div className="font-playfair text-3xl font-bold text-gray-800">150+</div>
-                <div className="text-sm text-gray-600">Weddings Planned</div>
+                <div className="font-playfair text-3xl font-bold text-white">150+</div>
+                <div className="text-sm text-white/80">Weddings Planned</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="font-playfair text-3xl font-bold text-gray-800">5</div>
-                <div className="text-sm text-gray-600">Years Experience</div>
+                <div className="font-playfair text-3xl font-bold text-white">5</div>
+                <div className="text-sm text-white/80">Years Experience</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="font-playfair text-3xl font-bold text-gray-800">98%</div>
-                <div className="text-sm text-gray-600">Happy Couples</div>
+                <div className="font-playfair text-3xl font-bold text-white">98%</div>
+                <div className="text-sm text-white/80">Happy Couples</div>
               </div>
             </motion.div>
           </motion.div>
 
-          {/* Image/Visual */}
+          {/* Charlotte's Portrait */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative w-full h-96 lg:h-[500px] bg-gradient-to-br from-rose-100 to-sage-100 rounded-3xl shadow-elegant overflow-hidden">
-              {/* Placeholder for hero image */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-soft mb-4 mx-auto">
-                    <span className="font-playfair text-2xl font-bold text-gray-800">CC</span>
-                  </div>
-                  <p className="text-gray-600 font-medium">Professional Wedding Photography</p>
-                  <p className="text-sm text-gray-500">Coming Soon</p>
-                </div>
-              </div>
+            <div className="relative w-full h-96 lg:h-[500px] rounded-3xl shadow-elegant overflow-hidden">
+              <Image
+                src="/images/hero/charlotte-portrait.png"
+                alt="Charlotte Chalder - Wedding Planner"
+                fill
+                className="object-cover"
+              />
               
               {/* Floating elements */}
               <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full shadow-soft">
@@ -169,7 +172,7 @@ const Hero = () => {
         >
           <button
             onClick={scrollToNext}
-            className="flex flex-col items-center space-y-2 text-gray-600 hover:text-rose-400 transition-colors duration-300"
+            className="flex flex-col items-center space-y-2 text-white/80 hover:text-white transition-colors duration-300"
           >
             <span className="text-sm font-medium">Discover More</span>
             <motion.div
@@ -201,10 +204,10 @@ const Hero = () => {
                 <Download className="w-8 h-8 text-white" />
               </div>
               <h3 className="font-playfair text-2xl font-bold text-gray-800 mb-2">
-                The Ultimate Wedding Planning Checklist
+                {leadMagnet.title}
               </h3>
               <p className="text-gray-600">
-                Get our comprehensive 12-month wedding planning checklist and never miss a detail for your perfect day.
+                {leadMagnet.description}
               </p>
             </div>
 
