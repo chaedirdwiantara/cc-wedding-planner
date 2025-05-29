@@ -45,7 +45,7 @@ const Portfolio = () => {
             <span className="text-gradient block">Across Europe</span>
           </h2>
           
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-800 max-w-3xl mx-auto leading-relaxed font-medium">
             Each wedding is a unique celebration of love. Browse through some of our most memorable 
             celebrations, from intimate garden ceremonies to grand château destinations.
           </p>
@@ -172,7 +172,7 @@ const Portfolio = () => {
             <h3 className="font-playfair text-2xl font-bold text-gray-800 mb-4">
               Ready to Create Your Own Love Story?
             </h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-800 mb-6 font-medium">
               Let's discuss how we can bring your wedding vision to life with the same attention to detail and elegance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
